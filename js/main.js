@@ -6,7 +6,18 @@ function writeMacro() {
     
     var generatedMacro = "delayTime = " + delayTime + "\n";
     for (i = 0; i < song.length; i++) {
-        
+        if (song[i] === " ") {
+            generatedMacro += "sleep delayTime\n";
+        }
+        else if (song[i] === "-") {
+            
+        }
+        else {
+            
+        }
     };
-    $("#songToggle").value = generatedMacro;
+    
+    generatedMacro += "}\nReturn\nF12::Pause Toggle";
+    
+    $("#macro").value = generatedMacro;
 }
