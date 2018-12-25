@@ -14,7 +14,16 @@
 </head>
 
 <body>
-    <input type="button" value="Play" onclick="ResumeSong()" id="songToggle">
+    Enter a song below to generate an autohotkey script. The keys are awsedrfgyhuji, to skip a beat use a space, and to sustain a note use a dash - for as many extra beats you want to sustain. <br>
+    
+    You can change the delay time and the toggle key that starts/stops the macro. <br><br>
+    
+    Song notes: <input type="text" id="song" style="width: 100%"><br>
+    Toggle Key: <input type="text" id="toggleKey" value="F12"><br>
+    Delay Time: <input type="text" id="delayTime" value="200"><br>
+
+    <input type="button" value="Create" onclick="writeMacro()" id="writeMacro"><br>
+    <textarea id="macro"></textarea>
     <div id="graph"></div>
 </body>
 
