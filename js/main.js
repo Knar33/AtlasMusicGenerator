@@ -5,8 +5,8 @@ function writeMacro() {
     var delayTime = $("#delayTime").value;
     
     var generatedMacro = "delayTime = " + delayTime + "\n";
-    for (int i = 0; i < song.length; i++) {
+    for (i = 0; i < song.length; i++) {
         
-    }
+    };
     $("#songToggle").value = generatedMacro;
 }
