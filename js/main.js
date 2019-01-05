@@ -1,4 +1,4 @@
-var SongPaused = false;
+var SongPaused = true;
 var song = $("#song").val() + " ";
 var delayTime = $("#delayTime").val();
 var currentNote = 0;
