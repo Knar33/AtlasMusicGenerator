@@ -29,7 +29,7 @@ function writeMacro() {
         }
     };
     
-    generatedMacro += "}\nReturn\nF12::Pause Toggle";
+    generatedMacro += "}\nReturn\n" + toggleKey + "::Pause Toggle";
     
     $("#macro").val(generatedMacro);
 }
