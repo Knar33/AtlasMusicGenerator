@@ -41,19 +41,20 @@ function writeMacro() {
 }
 
 function PlaySong() {
-    piano[0] = new Howl({ src: ['sound/piano/f1.wav'], volume: 1, preload: true });
-    piano[1] = new Howl({ src: ['sound/piano/fs1.wav'], volume: 1, preload: true });
-    piano[2] = new Howl({ src: ['sound/piano/g1.wav'], volume: 1, preload: true });
-    piano[3] = new Howl({ src: ['sound/piano/gs1.wav'], volume: 1, preload: true });
-    piano[4] = new Howl({ src: ['sound/piano/a1.wav'], volume: 1, preload: true });
-    piano[5] = new Howl({ src: ['sound/piano/as1.wav'], volume: 1, preload: true });
-    piano[6] = new Howl({ src: ['sound/piano/f1.wav'], volume: 1, preload: true });
-    piano[7] = new Howl({ src: ['sound/piano/g1.wav'], volume: 1, preload: true });
-    piano[8] = new Howl({ src: ['sound/piano/gs1.wav'], volume: 1, preload: true });
-    piano[9] = new Howl({ src: ['sound/piano/d1.wav'], volume: 1, preload: true });
-    piano[10] = new Howl({ src: ['sound/piano/ds1.wav'], volume: 1, preload: true });
-    piano[11] = new Howl({ src: ['sound/piano/e1.wav'], volume: 1, preload: true });
-    piano[12] = new Howl({ src: ['sound/piano/f2.wav'], volume: 1, preload: true });
+    var piano = [];
+    piano[0] = new Howl({ src: ['sound/f1.wav'], volume: 1, preload: true });
+    piano[1] = new Howl({ src: ['sound/fs1.wav'], volume: 1, preload: true });
+    piano[2] = new Howl({ src: ['sound/g1.wav'], volume: 1, preload: true });
+    piano[3] = new Howl({ src: ['sound/gs1.wav'], volume: 1, preload: true });
+    piano[4] = new Howl({ src: ['sound/a1.wav'], volume: 1, preload: true });
+    piano[5] = new Howl({ src: ['sound/as1.wav'], volume: 1, preload: true });
+    piano[6] = new Howl({ src: ['sound/f1.wav'], volume: 1, preload: true });
+    piano[7] = new Howl({ src: ['sound/g1.wav'], volume: 1, preload: true });
+    piano[8] = new Howl({ src: ['sound/gs1.wav'], volume: 1, preload: true });
+    piano[9] = new Howl({ src: ['sound/d1.wav'], volume: 1, preload: true });
+    piano[10] = new Howl({ src: ['sound/ds1.wav'], volume: 1, preload: true });
+    piano[11] = new Howl({ src: ['sound/e1.wav'], volume: 1, preload: true });
+    piano[12] = new Howl({ src: ['sound/f2.wav'], volume: 1, preload: true });
     
     setInterval(function() {
         if (!SongPaused) {
@@ -61,43 +62,43 @@ function PlaySong() {
                 currentNote = 0;
             }
             switch(song[currentNote]) {
-                case 'a'
+                case 'a':
                     piano[0].play();
                     break;
-                case 'w'
+                case 'w':
                     piano[1].play();
                     break;
-                case 's'
+                case 's':
                     piano[2].play();
                     break;
-                case 'e'
+                case 'e':
                     piano[3].play();
                     break;
-                case 'r'
+                case 'r':
                     piano[4].play();
                     break;
-                case 'd'
+                case 'd':
                     piano[5].play();
                     break;
-                case 'f'
+                case 'f':
                     piano[6].play();
                     break;
-                case 'g'
+                case 'g':
                     piano[7].play();
                     break;
-                case 'y'
+                case 'y':
                     piano[8].play();
                     break;
-                case 'h'
+                case 'h':
                     piano[9].play();
                     break;
-                case 'u'
+                case 'u':
                     piano[10].play();
                     break;
-                case 'j'
+                case 'j':
                     piano[11].play();
                     break;
-                case 'i'
+                case 'i':
                     piano[12].play();
                     break;
                 
