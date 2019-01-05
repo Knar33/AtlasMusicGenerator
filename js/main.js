@@ -1,4 +1,4 @@
-var SongPaused = false;
+var SongPaused = true;
 var song = " ";
 var delayTime = 200;
 var currentNote = 0;
@@ -6,6 +6,7 @@ PlaySong();
 
 //write macro to text function
 function writeMacro() {
+    currentNote = 0;
     song = $("#song").val() + " ";
     delayTime = $("#delayTime").val();
     var toggleKey = $("#toggleKey").val();
