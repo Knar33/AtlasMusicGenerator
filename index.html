@@ -14,7 +14,7 @@
     <title>Atlas Music Maker</title>
 </head>
 
-<body>    
+<body onkeydown="keyPressDown(event)">    
     <svg class="piano" height="230" width="400">
         <polygon onclick="piano[0].play()" points="35,10 65,10 65,100 80,100 80,220 35,220 35,10" class="white" data-key="70" id="f"/>
         <polygon onclick="piano[1].play()" points="65,10 95,10 95,100 65,100 65,10" class="black" data-key="51" id="f_sharp"/>

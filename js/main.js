@@ -105,3 +105,7 @@ function ResumeSong() {
     SongPaused = false;
     $("#songToggle").attr("onClick", "pauseSong()").attr("value", "Pause");
 }
+
+function keyPressDown(key) {
+    piano[key.key].play()
+}
