@@ -96,6 +96,19 @@ function songLoop() {
 }
 
 function pauseSong() {
+    piano['a'].stop();
+    piano['w'].stop();
+    piano['s'].stop();
+    piano['e'].stop();
+    piano['d'].stop();
+    piano['r'].stop();
+    piano['f'].stop();
+    piano['g'].stop();
+    piano['y'].stop();
+    piano['h'].stop();
+    piano['u'].stop();
+    piano['j'].stop();
+    piano['i'].stop();
     clearInterval(loopPlay);
     $("#songToggle").attr("onClick", "ResumeSong()").attr("value", "Play");
 }
