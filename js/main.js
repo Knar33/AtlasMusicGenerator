@@ -1,7 +1,6 @@
 var song = " ";
 var delayTime = 200;
 var currentNote = 0;
-var currentInstrument;
 var loopPlay;
 var piano = [];
 piano['a'] = new Howl({ src: ['sound/piano/f1.wav'], volume: 1, preload: true });
@@ -17,6 +16,7 @@ piano['h'] = new Howl({ src: ['sound/piano/d2.wav'], volume: 1, preload: true })
 piano['u'] = new Howl({ src: ['sound/piano/ds2.wav'], volume: 1, preload: true });
 piano['j'] = new Howl({ src: ['sound/piano/e2.wav'], volume: 1, preload: true });
 piano['i'] = new Howl({ src: ['sound/piano/f2.wav'], volume: 1, preload: true });
+var currentInstrument = piano['a'];
 
 //write macro to text function
 function writeMacro() {
@@ -78,18 +78,12 @@ function songLoop() {
         case 'u':
         case 'j':
         case 'i':
+            currentInstrument.stop();
             currentInstrument = piano[song[currentNote]];
             piano[song[currentNote]].play();
-            var sustains = 1;
-            while (true) {
-                if (song[currentNote + sustains] === '-') {
-                    sustains++;
-                }
-                else {
-                    break;
-                }
-            }
-            piano[song[currentNote]].fade(1, 0, (delayTime * sustains));
+            break;
+        case ' ':
+            currentInstrument.stop();
             break;
     }
     currentNote++;
